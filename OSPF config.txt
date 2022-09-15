@@ -1,0 +1,19 @@
+### R1
+
+router ospf 1 
+router-id 1.1.1.1
+network 10.1.1.0 0.0.0.255 area 0
+
+###R2
+router ospf 1 
+router-id 2.2.2.2
+network 10.2.2.0 0.0.0.255 area 0
+
+### CORE
+
+Se debe crear un proceso dedicado, no como un proceso global
+
+router ospf 10 vrf A
+router-id 30.30.30.30
+network 10.1.1.0 0.0.0.255 area 0
+network 10.2.2.0 0.0.0.255 area 0
