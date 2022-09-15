@@ -56,3 +56,29 @@ interface giga 0/0
 vrf forwarding A
 ip add 10.2.2.1 255.255.255.0
 no shu
+
+###
+R3
+
+vrf definition B
+address-family ipv4 unicast
+maximum routes 100 80 
+
+interface giga 0/0
+vrf forwarding B
+ip add 10.3.3.1 255.255.255.0
+no shu
+
+
+
+###
+R4
+
+vrf definition B
+address-family ipv4 unicast
+maximum routes 100 80 
+
+interface giga 0/0
+vrf forwarding B
+ip add 10.4.4.1 255.255.255.0
+no shu
