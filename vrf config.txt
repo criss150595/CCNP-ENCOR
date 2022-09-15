@@ -37,7 +37,7 @@ no shu
 
 R2
 
-vrf definition B
+vrf definition A
 address-family ipv4 unicast
 maximun routes 100 80    ### Permitira maximo 100 rutas y cuando llegue al 80% nos dara alguna alerta
 
