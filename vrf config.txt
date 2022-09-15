@@ -10,7 +10,7 @@ vrf definition B
 address-family ipv4 unicast
 maximun routes 100 80    ### Permitira maximo 100 rutas y cuando llegue al 80% nos dara alguna alerta
 
-
+# interfaces que pertenecen a VRF A
 interface giga 0/0
 vrf forwarding A
 ip add 10.1.1.2 255.255.255.0
@@ -21,6 +21,17 @@ vrf forwarding A
 ip add 10.2.2.2 255.255.255.0
 no shu
 
+# interfaces que pertenecen a VRF B
+
+interface giga 0/1
+vrf forwarding B
+ip add 10.3.3.2 255.255.255.0
+no shu
+
+interface giga 0/3
+vrf forwarding B
+ip add 10.4.4.2 255.255.255.0
+no shu
 
 ### R1
 
